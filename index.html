@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery图片收缩效果</title>
+<style>
+*{margin:0;padding:0;list-style-type:none;}
+img{border:0;}
+body{background:#F1F1F1;}
+
+.comp{background:url(images/7.png) no-repeat center center;width:200px;height:200px;display:block;cursor:pointer;position:relative;margin:230px auto 0 auto;}
+.comp ul.reset li{position:absolute;}
+</style>
+</head>
+<body>
+<!--代码部分begin-->
+<div class="comp">
+	<ul class="reset" style="display: block; z-index: 50; opacity:0;">
+		<li><a href="#"><img src="images/2.png" alt="展开收缩" /></a></li>
+		<li><a href="#"><img src="images/3.png" alt="展开之家" /></a></li>
+		<li><a href="#"><img src="images/4.png" alt="展开之家" /></a></li>
+		<li><a href="#"><img src="images/5.png" alt="展开之家" /></a></li>
+		<li><a href="#"><img src="images/6.png" alt="展开之家" /></a></li>
+		<li><a href="#"><img src="images/7.png" alt="展开之家" /></a></li>
+		<li><a href="#"><img src="images/8.png" alt="展开之家" /></a></li>
+	</ul>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/mobilyblocks.js"></script>
+<script>
+$(function(){
+	$('.comp').mobilyblocks({
+		trigger:'click',
+		direction:'counter',
+		duration:500,
+		zIndex:50,
+		widthMultiplier:1.1
+	});
+});
+</script>
+<!--代码部分end-->
+</body>
+</html>
